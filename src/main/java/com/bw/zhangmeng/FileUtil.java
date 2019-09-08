@@ -72,6 +72,45 @@ public class FileUtil {
 	}
 	
 	
+	/**
+	 * 
+	 * @param key
+	 * @return
+	 */
+	public static String getSystemProp(String key) {
+		
+		String propValue = System.getProperty(key);
+		return propValue;
+		
+	}
+	
+	/**
+	 * 返回文件以指定单位大小表示
+	 */
+	public long  getSize(String fileName,FileUnit fileUnit) {
+		File file = new File(fileName);
+		
+		
+		long  size = file.length();
+		switch (fileUnit) {
+			case B:
+				return size;
+			case KB:
+				return size/1024;
+			case MB:
+				return size/1024/1024;
+			case GB:
+				return size/1024/1024/1024;
+			case TB:
+				return size/1024/1024/1024/1024;
+			case PB:
+				return size/1024/1024/1024/1024/1024;
+			default:
+				return 0;
+		}
+		
+	}
+	
 	
 	
 	
