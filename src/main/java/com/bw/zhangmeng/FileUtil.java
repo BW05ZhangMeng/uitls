@@ -1,6 +1,7 @@
 package com.bw.zhangmeng;
 
 import java.io.File;
+import java.util.ArrayList;
 
 import org.apache.log4j.Logger;
 
@@ -39,8 +40,10 @@ public class FileUtil {
 	 * 如果是目录，则下面的文件和所有子目录Hon过的文件都要删除
 	 * 使用递归，涉及内容，判断目录的存在性，判断是否为目录或文件，删除
 	 * @param fileName
+	 * 
 	 */
 	public static void delFilePath(String fileName){
+	 
 		File file = new File(fileName);
 		//文件不存在则直接返回
 		if (!file.exists()) {
