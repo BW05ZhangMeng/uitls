@@ -13,7 +13,7 @@ public class StringUtils {
 
 	
 	/**
-	 * 
+	 * 完成toHtml(String text)工具方法 
 	 * @param text
 	 * @return
 	 */
