@@ -1,6 +1,7 @@
 package com.bw.zhangmeng;
 
 import org.junit.Test;
+
 import com.bw.zhangmeng.StringUtils;
 
 /** 
@@ -14,12 +15,13 @@ public class TestStringUtils {
 	public void testTel() {
 		String tel1="13583679291";
 		String tel2="14583679291";
+		String tel3="13785674126";
 		boolean b1 = StringUtils.isTelephone(tel1);
 		boolean b2 = StringUtils.isTelephone(tel2);
-		
+		boolean b3 = StringUtils.isTelephone(tel3);
 		System.out.println(" b1 is : " + b1);
 		System.out.println(" b2 is : " + b2);
-		
+		System.out.println(" b3 is : " + b3);
 	}
 	
 	
@@ -92,5 +94,17 @@ public class TestStringUtils {
 		
 		
 	}
+	
+	@Test
+	public void textHtml(){
+		String str="9月5日一大早，又有了新情况\r 上午9点多，传出中美经贸高级别磋商牵头人通话的消息\r 9月5日一大早，又有了新情况\r";
+		String html = StringUtils.toHtml(str);
+		System.out.println("html is"+html);
+	}
+	
+	
+	
+	
+	
 	
 }

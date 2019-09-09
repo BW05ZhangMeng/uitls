@@ -11,7 +11,22 @@ import java.util.regex.Pattern;
  */
 public class StringUtils {
 
-
+	
+	/**
+	 * 
+	 * @param text
+	 * @return
+	 */
+	public static String toHtml(String text){
+		String[] strings = text.split("\\\r");
+		StringBuilder sb = new StringBuilder();
+		for (String string : strings) {
+			sb.append("<p>").append(string).append("</p>");
+		}
+		return sb.toString();
+	}
+	
+	
 	
 	/**
 	 *  «∑Ò”–÷µ
